@@ -1,0 +1,39 @@
+#1 Navegue até a pasta unix_tests ;
+	resolvido com: $ cd estudos/trybe-exercicios/fundamentos/bloco-01-unix-e-shell/dia-1-4-unix-e-shell/unix_tests
+#2 Crie um arquivo texto pelo terminal com o nome skills2.txt e adicione os valores Internet , Unix e Bash , um em cada linha.
+	resolvido com: $ cat > skills2.txt
+					Internet
+					Unix
+					Bash
+					ctrl+D
+#3 Adicione mais 5 itens à sua lista de skills e depois imprima a lista ordenada no terminal. 🤓
+	resolvido com: $ cat >> skills2.txt
+					Sem Papel
+					DOE
+					Concessão de ATS
+					Processo de LP
+					Vida Escolar
+					ctrl+D
+#4 Conte quantas linhas tem o arquivo skills2.txt .
+	resolvido com: $ wc -l skills2.txt
+	resultado: 8 skills2.txt
+#5 Crie um arquivo chamado top_skills.txt usando o skills2.txt , contendo as 3 primeiras skills em ordem alfabética.
+	resolvido com $ sort < skills2.txt | head -3 | cat > top_skills.txt
+#6 Crie um novo arquivo chamado phrases2.txt pelo terminal e adicione algumas frases de sua escolha.
+	resolvido com: $ cat > phrases2.txt
+					Hoje o dia estava ensolarado kkkkkkk
+					O gato estava imitando um jacaré
+					E meus dotes atléticos estavam mais ou menos!
+#7 Conte o número de linhas que contêm as letras br .
+	resolvido com: $ grep -wc 'br' phrases.txt
+#8 Conte o número de linhas que não contêm as letras br.
+	resolvido com: $ grep -wc --invert-match 'br' phrases.txt
+#9 Adicione dois nomes de países ao final do arquivo phrases2.txt .
+	resolvido com: $ cat >> phrases.txt
+					Brasil
+					Botsuana
+#10 Crie um novo arquivo chamado bunch_of_things.txt com os conteúdos dos arquivos phrases2.txt e countries.txt
+	resolvido com: $ cat phrases2.txt countries.txt | cat > bunch_of_things.txt
+#11 Ordene o arquivo bunch_of_things.txt.
+	resolvido com: $ sort -o bunch_of_things.txt bunch_of_things.txt
+	//No exercício acima obtive ajuda com a resposta completa e a explicação do colega Bruno Bartolomeu- Turma 15 - Tribo B

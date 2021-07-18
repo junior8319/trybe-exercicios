@@ -1,0 +1,16 @@
+5 motivos para voce aprender JavaScript!
+------------------------------------------
+O JavaScript é uma linguagem de programação muito poderosa utilizada em todo o mundo!
+O uso mais convencional do JavaScript é no contexto do nosso navegador, juntamente com HTML e CSS.
+Por que o JavaScript é tão valorizado?
+----------------------------------------
+O JavaScript te permite dar dinamismos as paginas. Ele quem garante que sua pagina tenha a habilidade de reagir as ações das pessoas usuarias.
+5 motivos para voce aprender JavaScript
+-----------------------------------------
+#1 Muitas opções de bibliotecas e frameworks que vão maximizar sua produtividade.
+#2 Utilizado tanto em front end, quanto em back end.
+#3 Escrita mais simplificada em comparação com outras linguagens.
+#4 Constante evolução, principalmente por ter uma comunidade engajada
+#5 Linguagem que ganhou muita fama, sendo usada pelas maiores empresas internacionais.
+#6 Extremamente útil para programar para a rede global de computadores.
+#7 Interação com qualquer dispositivo que tenha conexão com a rede

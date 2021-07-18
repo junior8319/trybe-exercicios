@@ -1,0 +1,26 @@
+1.Navegue até a pasta unix_tests ;
+	resolvido com: $ cd estudos/trybe-exercicios/fundamentos/bloco-01-unix-e-shell/dia-1-4-unix-e-shell/unix_tests
+2.Rode o comando ls -l e veja quais as permissões dos arquivos;
+	resolvido com: $ ls -l
+					total 32
+					-rw-rw-r-- 1 junior junior 1960 jul 17 17:51 bunch_of_things.txt
+					-rw-rw-r-- 1 junior junior 1961 jul 17 17:41 cat
+					-rw-rw-r-- 1 junior junior 1842 jul 15 18:42 countries.txt
+					-rw-rw-r-- 1 junior junior  118 jul 15 18:38 phrases2.txt
+					-rw-rw-r-- 1 junior junior  134 jul 17 16:40 phrases.txt
+					-rw-rw-r-- 1 junior junior   79 jul 17 16:28 skills2.txt
+					-rw-rw-r-- 1 junior junior 1960 jul 17 17:39 sort
+					-rw-rw-r-- 1 junior junior   27 jul 17 16:29 top_skills.txt
+
+3.Mude a permissão do arquivo bunch_of_things.txt para que todos os usuários possam ter acesso à leitura e escrita, e verifique se está correto com o comando ls -l ;
+	resolvido com: $ chmod a+rw bunch_of_things.txt
+		//Resultado esperado: -rw-rw-rw- 1 ana ana 1860 ago 13 11:39 bunch_of_things.txt
+		resultado obtido: -rw-rw-rw- 1 junior junior 1961 jul 17 18:11 bunch_of_things.txt
+4.Tire a permissão de escrita do arquivo bunch_of_things.txt para todos os usuários, verifique se está correto com o comando ls -l ;
+	resolvido com: $ chmod a-w bunch_of_things.txt
+		//Resultado esperado: -r--r--r-- 1 ana ana 1860 ago 13 11:39 bunch_of_things.txt
+		resultado obtido: -r--r--r-- 1 junior junior 1961 jul 17 18:11 bunch_of_things.txt
+5.Volte à permissão do arquivo bunch_of_things.txt para a listada inicialmente utilizando o comando chmod 644 bunch_of_things.txt .
+	resolvido com: $ chmod 644 bunch_of_things.txt
+		//Resultado esperado: -rw-r--r-- 1 ana ana 1860 ago 13 11:39 bunch_of_things.txt
+		resultado obtido: -rw-r--r-- 1 junior junior 1961 jul 17 18:11 bunch_of_things.txt
