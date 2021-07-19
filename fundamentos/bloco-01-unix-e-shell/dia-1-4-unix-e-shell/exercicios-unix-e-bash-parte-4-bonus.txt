@@ -5,7 +5,7 @@ Execute o comando sudo apt-get install fortune , após a instalação, crie um a
 		After your lover has gone you will still have PEANUT BUTTER!
 
 Conte quantas palavras tem a frase da sua sorte do dia. Dica: use o comando wc ;
-		$ wc -w fortune.txt
+		$ wc -w fortune.txtd 
 
 Execute o comando sudo apt-get install sl , após a instalação, execute o comando sl . Agora tente sl -F ;
 		Passa um trem! :-)
