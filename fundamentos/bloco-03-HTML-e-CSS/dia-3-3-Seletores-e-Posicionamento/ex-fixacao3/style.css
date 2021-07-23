@@ -1,0 +1,19 @@
+body {
+
+}
+h1, p {
+    text-align: center;
+}
+
+ol, ul {
+    list-style: georgian outside url('/non-existent.svg');
+}
+
+li:hover {
+    background-color: blueviolet;
+}
+
+li:active {
+    font-family: cursive;
+    color: burlywood;
+}
