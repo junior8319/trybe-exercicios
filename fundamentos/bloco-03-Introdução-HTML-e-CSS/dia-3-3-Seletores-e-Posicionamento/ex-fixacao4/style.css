@@ -1,0 +1,65 @@
+body {
+
+}
+
+div:hover {
+    border: 0.7px solid rgb(9, 9, 87);
+}
+
+div:nth-of-type(1n){
+    background-color: chartreuse;
+}
+
+div:nth-of-type(2n){
+    background-color: rgb(72, 163, 175);
+}
+div:nth-of-type(3n){
+    background-color: rgb(192, 94, 48);
+}
+div:nth-of-type(4n){
+    background-color: rgb(163, 19, 19);
+}
+div:nth-of-type(5n){
+    background-color: rgb(240, 229, 128);
+}
+
+div:nth-of-type(1) h3{
+    color: crimson;
+    font-family: fantasy;
+    font-size: 25px;
+}
+
+div:nth-of-type(2) h3{
+    color: white;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+div:nth-of-type(3) h3{
+    color: #ebcf60;
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+}
+
+div:nth-of-type(4) h3{
+    color: #2e40f2;
+    font-family: Tahoma;
+    font-size: 40px;
+}
+
+div:nth-of-type(5) h3{
+    color: #db35d9;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+}
+
+h3:only-of-type{
+    color: #2e40f2;
+    font-family: Verdana, sans-serif;
+    font-size: 50px;
+}
+
+div:nth-of-type(2n+1) h3{
+    font-style: italic;
+}
+
