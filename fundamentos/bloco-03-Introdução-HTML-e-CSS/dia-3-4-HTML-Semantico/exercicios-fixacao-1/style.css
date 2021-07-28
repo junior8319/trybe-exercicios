@@ -1,0 +1,57 @@
+h1 {
+    text-align: center;
+}
+
+.first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    /* position: relative; */
+    /* Resposta do gabarito */
+    display: block;
+    margin-left: 200px;
+    /* left: 45%; */
+    /* right: 45%; */
+    /* list-style: none; */
+}
+
+.second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    /* position: relative; */
+    /* left: 33%; */
+    /* right: 33%; */
+}
+
+.third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    /* position: relative; */
+    /* left: 33%; */
+    /* right: 33%; */
+}
+
+.section-prizes {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+li {
+    display: inline-block;
+    text-align: center;
+}
+
+.section-prizes h3 {
+    text-align: center;
+}
+
