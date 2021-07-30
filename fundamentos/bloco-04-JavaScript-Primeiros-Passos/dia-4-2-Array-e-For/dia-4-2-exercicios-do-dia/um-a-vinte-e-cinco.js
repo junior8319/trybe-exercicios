@@ -6,6 +6,8 @@ for (i = 0; i < 25; i+=1) {
     control += 1;
 }
 
+console.log(control);
+
 console.log(numbers);
 
 for (i = 0; i < numbers.length; i+=1) {
