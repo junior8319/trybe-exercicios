@@ -1,4 +1,4 @@
-let peca = ("dDAMA".toLowerCase());
+let peca = ("DAMA".toLowerCase());
 console.log(peca);
 
 
