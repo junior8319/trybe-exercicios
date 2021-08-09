@@ -1,7 +1,11 @@
-let receivedNumbers = [1,2,9,9,6,2,5,4,4,3,1]
-let testedNumber = 9
-let indexesOfRepeateds = [];
-for (let i = 0; i < receivedNumbers.length; i += 1) {
-    (testedNumber === receivedNumbers[i]) ? indexesOfRepeateds.push(i) : false
+function apparitionsOfNumber (receivedNumber, receivedArray) {
+    let indexesOfRepeated = [];
+    for (let i = 0; i < receivedArray.length; i += 1) {
+        (receivedNumber === receivedArray[i]) ? indexesOfRepeated.push(i) : false
+    }
+    return indexesOfRepeated.length
 }
-console.log(indexesOfRepeateds)
+
+function
+
+console.log(apparitionsOfNumber(9, [1,2,9,9,6,2,5,4,4,3,1]))
