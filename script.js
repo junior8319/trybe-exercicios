@@ -29,7 +29,7 @@ function isValidArrayOfNumbers (receivedNumbers) {
     } else if (!isValidArrayOfNumbers(receivedNumbers) || apparitionsAreTooMuch(receivedNumbers)) {
         return 'não é possível gerar um número de telefone com esses valores';
     } else {
-        return receivedNumbers.join('').replace(/\d{11}/, (/\(\d{2}\)\s\d{5}\-\d{4}$/));
+        return receivedNumbers.join('').replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
     }
   }
   
