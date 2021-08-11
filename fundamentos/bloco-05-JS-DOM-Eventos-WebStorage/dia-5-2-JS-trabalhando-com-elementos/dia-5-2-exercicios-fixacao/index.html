@@ -39,6 +39,20 @@
 
     let terceiroFilho2 = pai.lastElementChild.previousElementSibling
 
+    let irmao = document.createElement('section')
+    irmao.id = 'irmaoElementoOndeVoceEsta'
+    pai.appendChild(irmao)
+
+    let filhoDeOndeVoceEsta = document.createElement('section')
+    filhoDeOndeVoceEsta.id = 'filhoDeOndeVoceEsta'
+    voceEsta.appendChild(filhoDeOndeVoceEsta)
+
+    let neto = document.createElement('section')
+    neto.id = 'primeiroNeto'
+    primeiroFilhoDoFilho.appendChild(neto)
+
+    let exercicioP2num4 =  neto.parentNode.parentNode.nextElementSibling
+
   </script>
 </body>
 </html>
