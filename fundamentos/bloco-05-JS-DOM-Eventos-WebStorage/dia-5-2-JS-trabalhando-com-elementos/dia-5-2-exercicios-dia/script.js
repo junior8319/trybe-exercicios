@@ -8,4 +8,9 @@ main.className = "main-content"
 
 document.body.appendChild(main)
 
+let sectionCenter = document.createElement('section')
+sectionCenter.className = "center-content"
+
+main.appendChild(sectionCenter)
+
 
