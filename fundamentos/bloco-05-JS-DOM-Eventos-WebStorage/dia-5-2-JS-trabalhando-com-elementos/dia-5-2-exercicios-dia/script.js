@@ -13,7 +13,13 @@ sectionCenter.className = "center-content"
 
 main.appendChild(sectionCenter)
 
+let sectionLeft = document.createElement('section')
+sectionLeft.className = "left-content"
+
+main.appendChild(sectionLeft)
+
 let newParagraph = document.createElement('p')
 newParagraph.innerText = "Algum texto"
 
 sectionCenter.appendChild(newParagraph)
+
