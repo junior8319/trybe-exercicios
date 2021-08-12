@@ -13,4 +13,7 @@ sectionCenter.className = "center-content"
 
 main.appendChild(sectionCenter)
 
+let newParagraph = document.createElement('p')
+newParagraph.innerText = "Algum texto"
 
+sectionCenter.appendChild(newParagraph)
