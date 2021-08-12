@@ -54,17 +54,16 @@
     let exercicioP2num4 =  neto.parentNode.parentNode.nextElementSibling
 
     let paiDoPai = document.getElementById('paiDoPai')
-    let descendentesDiretos = document.querySelectorAll('#paiDoPai > *')
-    function encontraTodosDescendentes (descendentesRecebidos) {
-      let todosDescendentes = [];
-      for (let index = 0; index < descendentesRecebidos.length; index += 1) {
-        todosDescendentes.push(document.querySelector(descendentesRecebidos[index] + '> *'))
+    
+    for (let index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+      let currentChild = pai.childNodes[index]
+      if(currentChild.id !== 'elementoOndeVoceEsta') {
+        currentChild.remove();
       }
-      return todosDescendentes
     }
 
-    let todosDescendentes = encontraTodosDescendentes(descendentesDiretos)
-    console.log(todosDescendentes)
+    let segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+    segundoEUltimoFilhoDoFilho.remove();
     
   </script>
 </body>
