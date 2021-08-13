@@ -72,11 +72,11 @@ for (let index = 0; index < 10; index += 1) {
       break
   }
 }
-console.log(numbersList)
 
 for (let index = 0; index < numbersList.length; index += 1) {
   let newLi = document.createElement('li')
   newLi.innerText = numbersList[index]
+  newLi.className = "textualNumbers"
   newUl.appendChild(newLi)
 }
 
@@ -104,3 +104,8 @@ main.removeChild(sectionLeft)
 sectionRight.style.margin = "auto"
 
 sectionCenter.parentElement.style.backgroundColor = "green"
+
+let listElements = document.querySelectorAll('.textualNumbers')
+for (let index = 0; index < listElements.length; index += 1) {
+  (index >= listElements.length - 2) ? listElements[index].remove() : false  
+}
