@@ -95,3 +95,12 @@ main.appendChild(thirdH3)
 firstH3.innerText = "Primeiro subtítulo"
 secondH3.innerText = "Segundo subtítulo"
 thirdH3.innerText = "Terceiro subtítulo"
+newH1.className = "title"
+firstH3.className = "description"
+secondH3.className = "description"
+thirdH3.className = "description"
+
+main.removeChild(sectionLeft)
+sectionRight.style.margin = "auto"
+
+sectionCenter.parentElement.style.backgroundColor = "green"
