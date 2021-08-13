@@ -79,3 +79,19 @@ for (let index = 0; index < numbersList.length; index += 1) {
   newLi.innerText = numbersList[index]
   newUl.appendChild(newLi)
 }
+
+let firstH3 = document.createElement('h3')
+firstH3.id = 'first-main-subtitle'
+main.appendChild(firstH3)
+
+let secondH3 = document.createElement('h3')
+secondH3.id = 'second-main-subtitle'
+main.appendChild(secondH3)
+
+let thirdH3 = document.createElement('h3')
+thirdH3.id = 'third-main-subtitle'
+main.appendChild(thirdH3)
+
+firstH3.innerText = "Primeiro subtítulo"
+secondH3.innerText = "Segundo subtítulo"
+thirdH3.innerText = "Terceiro subtítulo"
