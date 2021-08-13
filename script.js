@@ -7,9 +7,8 @@ function hydrate (receivedString) {
     }
     return (sumOfNumbers === 1) ? sumOfNumbers + ' copo de água' : sumOfNumbers + ' copos de água' ;
 }
-console.log(hydrate("1 cerveja, 5 cachaças"));
 console.log(hydrate("1 cerveja"));
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+onsole.log(hydrate("1 cerveja, 5 cachaças"));
 console.log('5tr1ng0'.replace(/([^\d])+/gim, ''));
 console.log('1 cerveja'.replace(/\D/gim, ''));
-
