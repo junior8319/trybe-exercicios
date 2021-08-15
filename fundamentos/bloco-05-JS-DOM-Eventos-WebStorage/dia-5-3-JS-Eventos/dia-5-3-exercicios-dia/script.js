@@ -86,12 +86,11 @@ createFridayButton('Sexta-feira');
 function createTaskSpan (spanString) {
   const selectTaskParent = document.querySelector('div.my-tasks');
   const theSpan = document.createElement('span');
-  // theSpan.classList.add('task');
-  theSpan.innerText = spanString;
+  theSpan.innerHTML = spanString;
   selectTaskParent.appendChild(theSpan);
 }
 
-createTaskSpan('cozinhar');
+createTaskSpan('Teste:');
 toggleFridayText();
 
 const holidayButton = document.querySelector('.btn-holiday');
@@ -108,11 +107,22 @@ function toggleZoomInDays (receivedEvent) {
 
   if (type === 'mouseenter') {
     receivedElement.style.fontSize = "25px";
+    receivedElement.style.fontWeight = "600";
   }
   
   if (type === 'mouseleave') {
     receivedElement.style.fontSize = "";
+    receivedElement.style.fontWeight = "";
   }
 
 }
 
+function createTaskDiv(receivedColor) {
+  const taskContainer = document.querySelector('.my-tasks');
+  const newTaskDiv = document.createElement('div');
+  newTaskDiv.classList.add('task');
+  newTaskDiv.style.backgroundColor = receivedColor;
+  taskContainer.appendChild(newTaskDiv);
+}
+
+createTaskDiv('rgb(255, 160, 150)');
