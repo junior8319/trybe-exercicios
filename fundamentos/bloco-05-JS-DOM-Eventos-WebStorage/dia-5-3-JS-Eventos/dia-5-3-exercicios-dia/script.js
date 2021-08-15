@@ -39,9 +39,6 @@ function toggleHolidaysColor(receivedEvent) {
   for (let index = 0; index < holidays.length; index +=1) {
     const currentColor = getComputedStyle(holidays[index]).getPropertyValue('color');
     (currentColor !== 'rgb(134, 43, 214)') ? holidays[index].style.color = 'rgb(134, 43, 214)' : holidays[index].style.color = 'rgb(119, 119, 119)';
-    // if (currentColor !== 'rgb(119, 119, 119)') {
-    //   holidays[index].style.color = 'rgb(119, 119, 119)';
-    // }
   }
 }
 
