@@ -51,5 +51,16 @@ function createHolidaysButton (holidaysString) {
 }
 
 createHolidaysButton('Feriados');
+
+function createFridayButton (fridayString) {
+  const selectParent = document.querySelector('div.buttons-container');
+  const theButton = document.createElement('button');
+  theButton.classList.add('btn-friday');
+  theButton.innerText = fridayString;
+  selectParent.appendChild(theButton);
+}
+
+createFridayButton('Sexta-feira');
+
 const holidayButton = document.querySelector('.btn-holiday');
 holidayButton.addEventListener('click', toggleHolidaysColor);
