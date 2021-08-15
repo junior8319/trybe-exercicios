@@ -100,6 +100,7 @@ const days = document.getElementsByClassName('day');
 for (let index = 0; index < days.length; index += 1) {
   days[index].addEventListener('mouseenter', toggleZoomInDays);
   days[index].addEventListener('mouseleave', toggleZoomInDays);
+  days[index].addEventListener('click', markDayForTask);
 }
 function toggleZoomInDays (receivedEvent) {
   const receivedElement = receivedEvent.target;
@@ -126,3 +127,29 @@ function createTaskDiv(receivedColor) {
 }
 
 createTaskDiv('rgb(255, 160, 150)');
+
+function toggleSelectedColor() {
+  const taskSelected = document.getElementsByClassName('task selected');
+  const myTasksContainer = document.querySelector('.task');
+
+  myTasksContainer.addEventListener('click', function(receivedEvent) {
+    if (taskSelected.length === 0) {
+      receivedEvent.target.className = 'task selected';
+    } else {
+      receivedEvent.target.className = 'task';
+    }
+  })
+};
+
+toggleSelectedColor();
+
+function markDayForTask (receivedEvent) {
+  const task = document.querySelector('.task.selected');
+  const colorOfTask = getComputedStyle(task).getPropertyValue('background-color');
+  console.log(task);
+  console.log(colorOfTask);
+  const markedDay = receivedEvent.target;
+  const colorOfMarkedDay = getComputedStyle(markedDay).getPropertyValue('color');
+  console.log(colorOfMarkedDay);
+  (colorOfMarkedDay !== colorOfTask) ? markedDay.style.color = colorOfTask : markedDay.style.color = '';
+}
