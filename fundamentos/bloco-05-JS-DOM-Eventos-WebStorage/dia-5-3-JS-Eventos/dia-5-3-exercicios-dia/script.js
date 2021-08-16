@@ -146,10 +146,39 @@ toggleSelectedColor();
 function markDayForTask (receivedEvent) {
   const task = document.querySelector('.task.selected');
   const colorOfTask = getComputedStyle(task).getPropertyValue('background-color');
-  console.log(task);
-  console.log(colorOfTask);
   const markedDay = receivedEvent.target;
   const colorOfMarkedDay = getComputedStyle(markedDay).getPropertyValue('color');
-  console.log(colorOfMarkedDay);
   (colorOfMarkedDay !== colorOfTask) ? markedDay.style.color = colorOfTask : markedDay.style.color = '';
 }
+
+function makeAppointments(receivedEvent) {
+  const receivedValue = receivedEvent.target.value;
+  const buttonPressed = (receivedEvent.type === 'click');
+  const receivedKey = receivedEvent.which || receivedEvent.keycode;
+  if (receivedKey === 13) {
+    if (receivedValue.length === 0) {
+      window.alert('Erro ao tentar adicionar campo vazio.')
+    } else {
+      const taskList = document.querySelector('.task-list');
+      const newAppointment = document.createElement('li');
+      newAppointment.innerHTML = receivedValue;
+      taskList.appendChild(newAppointment);
+    }
+  }  
+  // if (buttonPressed) {
+  //   if (receivedValue.length === 0) {
+  //     window.alert('Erro ao tentar adicionar campo vazio.')
+  //   } else {
+  //     const taskList = document.querySelector('.task-list');
+  //     const newAppointment = document.createElement('li');
+  //     newAppointment.innerHTML = receivedValue;
+  //     taskList.appendChild(newAppointment);
+  //   }
+  // }  
+}
+
+const taskInput = document.getElementById('task-input');
+const addButton = document.getElementById('btn-add');
+taskInput.addEventListener('keypress', makeAppointments);
+taskInput.addEventListener('keyup', makeAppointments);
+addButton.addEventListener('click', makeAppointments);
