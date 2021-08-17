@@ -153,8 +153,8 @@ function markDayForTask (receivedEvent) {
 
 function makeAppointments(receivedEvent) {
   const receivedValue = receivedEvent.target.value;
-  const buttonPressed = (receivedEvent.type === 'click');
-  const receivedKey = receivedEvent.which || receivedEvent.keycode;
+  const receivedKey = receivedEvent.which;
+  console.log(receivedKey, receivedValue);
   if (receivedKey === 13) {
     if (receivedValue.length === 0) {
       window.alert('Erro ao tentar adicionar campo vazio.')
@@ -179,6 +179,5 @@ function makeAppointments(receivedEvent) {
 
 const taskInput = document.getElementById('task-input');
 const addButton = document.getElementById('btn-add');
-taskInput.addEventListener('keypress', makeAppointments);
 taskInput.addEventListener('keyup', makeAppointments);
 addButton.addEventListener('click', makeAppointments);
