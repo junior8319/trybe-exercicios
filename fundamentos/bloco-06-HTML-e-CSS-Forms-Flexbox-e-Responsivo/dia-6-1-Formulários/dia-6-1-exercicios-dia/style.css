@@ -1,0 +1,27 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  background-color: rgb(199, 199, 199);
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+
+.input-container {
+  background-color: rgb(199, 199, 199);
+  text-align: left;
+  width: 70%;
+  margin: auto;
+}
+
+.input-container * {
+  width: 95%;
+  display: block;
+  margin: auto;
+}
+
+.input-container fieldset {
+  border: 0;
+}
