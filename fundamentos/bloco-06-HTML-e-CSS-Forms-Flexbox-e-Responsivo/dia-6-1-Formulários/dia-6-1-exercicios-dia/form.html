@@ -36,9 +36,25 @@
             Cidade:
             <input required maxlength="28" type="text">
           </label>
-          <select name="federation-unitys" id="federation-unitys">
-            
-          </select>
+          <label for="federation-unitys">Estado</label>
+          <select required name="federation-unitys" id="federation-unitys"></select>
+          <input type="radio" name="address-type" id="type-house" value="casa" required>
+          <label for="type-house">Casa</label>
+          <input type="radio" name="address-type" id="type-apartment" value="apartamento" required>
+          <label for="type-apartment">Apartamento</label>
+        </fieldset>
+        <fieldset> Último emprego <br>
+          <label for="abstract-area">Seu resumo:</label>
+          <br>
+          <textarea name="abstract-area" id="abstract-area" maxlength="1000" placeholder="faça um breve resumo aqui" required cols="80" rows="5">
+          </textarea><br>
+          <label for="input-post">Cargo</label>
+          <input type="text" id="input-post">
+          <br>
+          <label for="description-area">Descrição:</label>
+          <br>
+          <textarea name="description-area" id="description-area" maxlength="500" placeholder="faça uma breve descrição aqui" required cols="80" rows="5">
+          </textarea><br>
         </fieldset>
       </form>
     </div>
