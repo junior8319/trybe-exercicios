@@ -1,0 +1,34 @@
+header {
+  width: 60%;
+  margin: 15px auto;
+  background-color: rgb(245, 245, 245);
+  border: solid 1px rgb(215, 215, 215);
+  color: rgb(195, 195, 195);
+  border-radius: 15px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+form {
+  border-radius: 15px;
+  width: 60%;
+  border: solid 1px rgb(215, 215, 215);
+  background-color: rgb(245, 245, 245);
+  margin: 15px auto;
+}
+
+.input-container {
+  text-align: center;
+  color: rgb(195, 195, 195);
+}
+
+.input-container input {
+  margin: 10px;
+  width: 90%;
+  border: solid 0.3px rgb(215, 215, 215);
+  border-radius: 10px;
+  background-color: rgb(252, 252, 252);
+}
+
