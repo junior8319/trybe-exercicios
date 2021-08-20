@@ -2,6 +2,9 @@ window.onload = function () {
   loadFedUnits();
   submitResumee();
   isValidDate();
+  makeTitlesDisplay3();
+  makeLeads();
+  const initDate = document.getElementById('input-init-date').DatePickerX.init({format: 'dd/mm/yyyy'});
 }
 
 function loadFedUnits () {
@@ -61,4 +64,27 @@ function splitDate (date) {
   const month = splitedDate[1];
   const year = splitedDate[2];
   return {day, month, year};
+}
+
+
+function makeTitlesDisplay3 () {
+  const theTitles = document.getElementsByTagName('h1');
+  if(theTitles !== null) {
+    for(let index = 0; index < theTitles.length; index += 1) {
+      theTitles[index].classList.add('display-3');
+    }
+  }else {
+    theTitles = [];
+  }
+}
+
+function makeLeads () {
+  const theParagraphs = document.getElementsByTagName('p');
+  if(theParagraphs !== null) {
+    for(let index = 0; index < theParagraphs.length; index += 1) {
+      (theParagraphs[index].previousElementSibling.tagName === 'H1') ? theParagraphs[index].classList.add('lead') : false;
+    }
+  } else {
+    theParagraphs = [];
+  }
 }
