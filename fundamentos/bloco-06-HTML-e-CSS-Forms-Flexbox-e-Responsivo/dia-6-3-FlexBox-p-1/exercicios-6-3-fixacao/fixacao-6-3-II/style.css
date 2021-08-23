@@ -1,0 +1,23 @@
+.box {
+  color: #9069EF;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid #232525;
+  font-size: 50px;
+  height: 60px;
+  margin: 10px 5px;
+  text-align: center;
+  width: 20%;
+}
+
+.box-container {
+  background-color: #0fa36b;
+  display: flex;
+  /* ADICIONE AQUI SEUS TESTES */
+  /* justify-content: baseline; // não houve alteração */
+  /* justify-content: center; //centralizou os elementos filhos(espaço igual nas laterais */
+  /* justify-content: flex-end; //colocou os elementos para a direita, com o espaço ficando à esquerda */
+  /* justify-content: flex-start; //colocou os elementos para a esquerda, com o espaço ficando à direita */
+  /* justify-content: space-around; //colocou os elementos centralizados, com 2/3 do espaço dividos entre os filhos e 1/6 em cada lateral */
+  /* justify-content: space-between; //colocou o espaço dividido em 2, entre os elementos, sem espaços nas bordas */
+  justify-content: space-evenly; //dividiu o espaço igualmente entre os filhos e a borda
+}
