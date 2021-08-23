@@ -19,5 +19,5 @@
   /* justify-content: flex-start; //colocou os elementos para a esquerda, com o espaço ficando à direita */
   /* justify-content: space-around; //colocou os elementos centralizados, com 2/3 do espaço dividos entre os filhos e 1/6 em cada lateral */
   /* justify-content: space-between; //colocou o espaço dividido em 2, entre os elementos, sem espaços nas bordas */
-  justify-content: space-evenly; //dividiu o espaço igualmente entre os filhos e a borda
+  justify-content: space-evenly; /*dividiu o espaço igualmente entre os filhos e a borda*/
 }
