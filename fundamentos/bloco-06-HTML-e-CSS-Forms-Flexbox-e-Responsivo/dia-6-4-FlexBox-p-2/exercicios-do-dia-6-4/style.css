@@ -78,6 +78,9 @@ body {
   display: flex;
   flex-direction: column;
   flex-basis: 350px;
+  align-self: center;
+  justify-content: center;
+  flex-grow: 1;
   margin: 20px;
 }
 
