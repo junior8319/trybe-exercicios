@@ -52,8 +52,6 @@ const orderModifier = (order) => {
   Object.assign(order.payment, newPayment);
   
   console.log(`Olá ${order.name}, o total do seu pedido de ${pizzas[0]}, ${pizzas[1]} e ${order.order.drinks.coke.type} é ${order.payment.total},00`);
-  console.log(order.name);
-
 }
 
 orderModifier(order);
