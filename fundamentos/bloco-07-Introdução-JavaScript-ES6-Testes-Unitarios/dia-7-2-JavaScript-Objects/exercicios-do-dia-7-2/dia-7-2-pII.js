@@ -42,7 +42,12 @@ const numberOfStudentsInLessons = () => {
   for (const index in lessonsInAllLessons) {
     sumOfStudents += parseInt(lessonsInAllLessons[index].numeroEstudantes);
   }
-  console.log(sumOfStudents);
+  // console.log(sumOfStudents);
   return sumOfStudents;
 }
 numberOfStudentsInLessons();
+
+const getValueByNumber = (object, number) => Object.values(object)[number];
+const getKeyByNumber = (object, number) => Object.keys(object)[number];
+console.log(getKeyByNumber(lesson2, 2));
+console.log(getValueByNumber(lesson2, 2));
