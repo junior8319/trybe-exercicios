@@ -11,7 +11,7 @@ const tasks = ['Acordar', 'Tomar café', 'Escovar os dentes', 'Ir Trabalhar'];
 class Tasks extends React.Component {
   render () {
     return (
-      <ul>{tasks.map( task => Task(task)) }</ul>
+      <ul>{ tasks.map( task => Task(task)) }</ul>
     );
   }
 }
