@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Greeting from './Greeting';
 
@@ -11,6 +10,8 @@ function App() {
 }
 
 export default App;
+
+
 /**
  * MeuComponente.propTypes = {
   // Todos os validadores aqui são, por padrão, validadores opcionais.
