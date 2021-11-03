@@ -9,3 +9,12 @@ test('Simula função que gera números aleatórios', () => {
   expect(genRandomNumber).toHaveBeenCalled();
   expect(genRandomNumber).toBeCalledTimes(1);
 });
+
+test('Simula que a função agora recebe 2 número e calcula a divisão', () => {
+  const numberA = 20;
+  const numberB = 5;
+  genRandomNumber = jest.fn().mockImplementation((a, b) => a / b);
+  expect(genRandomNumber(numberA, numberB)).toBe(4);
+  expect(genRandomNumber).toBeCalled();
+  expect(genRandomNumber).toBeCalledTimes(1);
+});
