@@ -1,5 +1,7 @@
 const { it, test, describe, expect } = require('@jest/globals');
 const service = require('./service');
+// jest.mock("./service");
+
 let {
   genRandomNumber,
   transformToUpperCase,
