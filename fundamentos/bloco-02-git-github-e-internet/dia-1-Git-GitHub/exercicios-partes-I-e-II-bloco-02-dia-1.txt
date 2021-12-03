@@ -1,3 +1,0 @@
-/* BLOCO 2 Git, GitHub e Internet */
-Exercícios Parte I
-Nesta parte, eu segui os passos para confirgurar o git na minha pasta de exercícios da trybe, criar o repositório dela na minha conta do GitHub (eu já tinha), criar uma chave SSH e conectar meu repositório local com o remoto.
