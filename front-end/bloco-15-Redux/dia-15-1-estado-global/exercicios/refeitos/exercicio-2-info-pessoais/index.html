@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container-one">
+      <h1>Informações do primeiro Reducer:</h1>
+      <p>Nome: <span id="nome-1">Rodrigo</span></p>
+      <p>Sobrenome: <span id="sobrenome-1">Santos da Silva</span></p>
+      <p>Endereço: <span id="endereco-1">Rua Soldado Mathias, 765</span></p>
+      <p>Cidade: <span id="cidade-1">Belo Horizonte</span></p>
+    </div>
+    <div id="container-two">
+      <h1>Informações do segundo Reducer:</h1>
+      <p>Nome: <span id="nome-2">Bruna</span></p>
+      <p>Sobrenome: <span id="sobrenome-2">Santana Oliveira</span></p>
+      <p>Endereço: <span id="endereco-2">Rua Holanda, 332</span></p>
+      <p>Cidade: <span id="cidade-2">São Paulo</span></p>
+    </div>
+    <div id="form">
+      <fieldset>
+        <label for="name-one">
+          Mudar primeiro nome:
+          <input type="text" name="name-one" id="name-one">
+        </label>
+        <label for="last-name-one">
+          Mudar primeiro sobrenome:
+          <input type="text" name="last-name-one" id="last-name-one">
+        </label>
+        <button id="change-one">Muda 1</button>
+      </fieldset>
+      <fieldset>
+        <label for="name-two">
+          Mudar segundo nome:
+          <input type="text" name="name-two" id="name-two">
+        </label>
+        <label for="last-name-two">
+          Mudar segundo sobrenome:
+          <input type="text" name="last-name-two" id="last-name-two">
+        </label>
+        <button id="change-two">Muda 2</button>
+      </fieldset>
+    </div>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

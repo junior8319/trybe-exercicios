@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="DatePickerX-master/dist/css/DatePickerX.min.css">
+  <link rel="stylesheet" href="node_modules/just-validate/dist/css/justValidateTooltip.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>6.1 - Form Curriculum</title>
+</head>
+<body>
+  <header class="container text-center">
+    <h1>Curriculum Vitae</h1>
+    <p>Cadastre seu curriculum e aguarde para ser feliz!</p>
+  </header>
+  <section id="section-form">
+    <div class="container mb-3">
+      <form action="" method="get">
+          <div class="mb-3">
+            <div class="row">
+              <label class="form-label" for="input-name">
+                Nome:
+                <input required maxlength="40" type="text" id="input-name" class="form-control">            
+              </label>
+            </div>
+            <div class="row">
+              <label class="form-label" for="input-email">
+                email:
+                <input required maxlength="50" type="text" id="input-email" class="form-control">
+              </label>
+              <label class="form-label" for="input-cpf">
+                CPF:
+                <input required maxlength="11" type="text" id="input-cpf" class="form-control">
+              </label>
+            </div>
+            
+            <div class="row">
+              <label class="form-label" for="input-address">
+                Endereço:
+                <input required maxlength="200" type="text" id="input-address" class="form-control">
+              </label>
+            </div>
+            <div class="row">
+              <label class="form-label" for="input-city">
+                Cidade:
+                <input required maxlength="28" type="text" id="input-city" class="form-control">
+              </label>
+              <label class="form-label" for="federation-units">Estado</label>
+              <select class="form-select mb-3" required name="federation-units" id="federation-units"></select>
+              <div class="form-check">
+                <input type="radio" name="address-type" id="type-house" value="casa" required>
+                <label class="form-check-label" for="type-house">Casa</label>
+                <input type="radio" name="address-type" id="type-apartment" value="apartamento" required>
+                <label class="form-check-label" for="type-apartment">Apartamento</label>
+              </div>
+            </div>  
+          </div>
+           
+          <div class="row mb-3">
+            <h1>Último emprego</h1>
+            <label class="form-label" for="abstract-area">Seu resumo:</label>
+            <textarea class="form-control" name="abstract-area" id="abstract-area" maxlength="1000" placeholder="faça um breve resumo aqui" required cols="80" rows="5"></textarea>
+          </div>
+          <div class="row mb-3">
+            <label class="form-label" for="input-post">Cargo</label>
+            <input class="form-control" type="text" id="input-post" required>
+          </div>
+          <div class="row mb-3">
+            <label class="form-label" for="description-area">Descrição:</label>
+            <textarea class="form-control" name="description-area" id="description-area" maxlength="500" placeholder="faça uma breve descrição aqui" required cols="80" rows="5"></textarea>
+          </div>
+          <div class="row mb-3">
+            <label class="form-label" for="input-init-date">Data de Início:</label>
+            <input class="form-control" type="text" name="input-init-date" id="input-init-date" required>
+          </div>                    
+
+        <div class="btn-group mb-3">
+          <button class="btn btn-outline-primary ml-3" type="submit" id="btn-submit">Enviar</button>
+          <button class="btn btn-outline-warning ml-3" type="reset" id="btn-reset">Limpar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="DatePickerX-master/dist/js/DatePickerX.min.js"></script>
+  <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

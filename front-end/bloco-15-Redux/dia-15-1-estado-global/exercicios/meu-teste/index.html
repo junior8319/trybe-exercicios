@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Teste Redux</title>
+</head>
+<body>
+  <h1 id="titulo">Um título</h1>
+  <p id="nome">Um nome</p>
+  <button id="troca-titulo">Trocar Título</button>
+  <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+  <script>
+    console.log(Redux);
+    document.getElementById('troca-titulo').addEventListener('click', event => {
+      const { innerHTML } = document.getElementById('titulo');
+      console.log(innerHTML);
+      store.dispatch({
+        type: MUDA_TITULO,
+        titulo: 'Título diferente',
+      });
+    });
+    
+    const meuReducer = (state = [], action) => {
+      if (action.type === 'MUDA_TITULO') {
+        return [...state, action.titulo];
+      } 
+    };
+    
+    const store = Redux.createStore(
+      meuReducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    );
+
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>
