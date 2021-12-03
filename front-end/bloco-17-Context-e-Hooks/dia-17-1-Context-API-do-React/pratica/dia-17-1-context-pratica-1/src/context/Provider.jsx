@@ -1,13 +1,12 @@
-import App from "../App";
 import MyContext from "./MyContext";
 import Test from "./Test";
 
 function Provider() {
+  const state = 'estado inicial';
   return (
-    <MyContext.Provider value={'estado inicial'}>
-      <Provider>
-        <Test />
-      </Provider>
+    <MyContext.Provider value={state}>
+      <h1>Componente Provedor</h1>
+      <Test state={state} />
     </MyContext.Provider>
   );
 }

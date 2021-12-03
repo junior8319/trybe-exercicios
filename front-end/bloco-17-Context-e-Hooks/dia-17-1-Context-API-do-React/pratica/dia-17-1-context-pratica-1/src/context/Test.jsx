@@ -1,6 +1,6 @@
 import MyContext from "./MyContext";
 
-function Test(value) {
+function Test() {
   return (
     <MyContext.Consumer>
       {(value) => (
