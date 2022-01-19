@@ -5,3 +5,6 @@ Exercise 1.3
 Just to access the localhost:4545/missao_trybe.html on the browser.
 Exercise 1.4
 Add a new paragraph.
+Exercise 1.5
+-> docker container ls -a
+ID: 326f14a5a7e1
