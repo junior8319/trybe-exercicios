@@ -8,3 +8,18 @@ Add a new paragraph.
 Exercise 1.5
 -> docker container ls -a
 ID: 326f14a5a7e1
+Exercise 1.6
+-> docker container inspect 326
+Result:
+  "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/junior/estudos/trybe-exercicios/back-end/bloco-19-Docker/dia-19-3-Compose/d-19-3-exercicios",
+                "Destination": "/usr/local/apache2/htdocs",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+Exercise 1.7
+-> docker container stop 326
