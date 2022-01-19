@@ -25,3 +25,5 @@ Exercise 1.7
 -> docker container stop 326
 Exercise 1.8
 -> docker container rm 326
+Exercise 1.9
+Result: file still exists.
