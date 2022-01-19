@@ -27,3 +27,8 @@ Exercise 1.8
 -> docker container rm 326
 Exercise 1.9
 Result: file still exists.
+Exercise 1.10
+-> docker images
+Results: IMAGE ID: dabbfbe0c57b
+Exercise 1.11
+-> docker rmi dabbfbe0c57b
