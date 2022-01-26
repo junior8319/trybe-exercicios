@@ -1,3 +1,4 @@
+/* Para que estas inquirições funcionem, deve ser executado o script './Scientists.sql' */
 USE Scientists;
 SELECT 'This is SQL Exercise, Practice and Solution';
 SELECT	01 as number_one,
