@@ -18,7 +18,30 @@ fs.readFile('./simpsons.json', 'utf-8')
     
     const filteredSimpsons = simpsonsList.filter((simpson) => simpson.id !== '10' && simpson.id !== '6');
     console.log(filteredSimpsons);
-    await fs.writeFile('./simpsons.json', JSON.stringify(filteredSimpsons));
+    await fs.appendFile('./filteredSimpsons.json', JSON.stringify(filteredSimpsons));
+  };
+
+  const simpsonsFamily = async () => {
+    const simpsonsList = await fs
+      .readFile('./simpsons.json', 'utf-8')
+      .then((fileContent) => JSON.parse(fileContent));
+
+      const familySelected = simpsonsList.filter((simpson) => simpson.name.includes('Simpson'));
+      console.log(familySelected);
+      await fs.appendFile('./simpsonsFamily.json', JSON.stringify(familySelected));
+  };
+
+  const addNelsonToFamily = async () => {
+    const simpsonsList = await fs
+      .readFile('./simpsons.json', 'utf-8')
+      .then((fileContent) => JSON.parse(fileContent));
+
+      const findNelson = simpsonsList.find((simpson) => simpson.name.includes('Nelson Muntz'));
+      console.log(findNelson);
+
+      await fs.appendFile('./simpsonsFamily.json', JSON.stringify(findNelson));
   };
 
   filterSimpsons();
+  simpsonsFamily();
+  addNelsonToFamily();
