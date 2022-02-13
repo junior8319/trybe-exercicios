@@ -45,3 +45,5 @@ fs.readFile('./simpsons.json', 'utf-8')
   filterSimpsons();
   simpsonsFamily();
   addNelsonToFamily();
+
+  // need to fix the repeated data problem in the generated files
