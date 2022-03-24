@@ -1,6 +1,9 @@
 import * as Length from "./length";
 import * as Mass from './mass';
 import * as Volume from './capacity';
+import * as InteractiveLength from './interactiveLength';
+
+InteractiveLength.execute();
 
 console.log(Length.convert(15, 'km', 'dm'));
 console.log(Length.convert(15, 'dm', 'km'));

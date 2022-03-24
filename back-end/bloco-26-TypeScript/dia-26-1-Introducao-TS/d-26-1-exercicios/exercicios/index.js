@@ -26,6 +26,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Length = __importStar(require("./length"));
 const Mass = __importStar(require("./mass"));
 const Volume = __importStar(require("./capacity"));
+const InteractiveLength = __importStar(require("./interactiveLength"));
+InteractiveLength.execute();
 console.log(Length.convert(15, 'km', 'dm'));
 console.log(Length.convert(15, 'dm', 'km'));
 console.log(Length.convert(15, 'm', 'hm'));
