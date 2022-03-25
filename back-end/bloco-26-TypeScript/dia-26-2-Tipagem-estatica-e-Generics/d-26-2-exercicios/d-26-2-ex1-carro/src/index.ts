@@ -1,0 +1,24 @@
+import Carro from "./carro";
+import cor from "./cores";
+import direcao from "./direcao";
+import portas from "./portas";
+
+const carroPreto = new Carro('Ford', cor.PRETA, 4);
+console.log(carroPreto);
+carroPreto.abrirPorta(portas.CARONA);
+carroPreto.fecharPorta(portas.CARONA);
+carroPreto.ligar();
+carroPreto.desligar();
+carroPreto.ligar();
+carroPreto.buzinar();
+carroPreto.aumentaVelocidade();
+carroPreto.aumentaVelocidade();
+carroPreto.aumentaVelocidade();
+carroPreto.diminuiVelocidade();
+carroPreto.diminuiVelocidade();
+carroPreto.diminuiVelocidade();
+carroPreto.diminuiVelocidade();
+carroPreto.parar();
+carroPreto.aumentaVelocidade();
+carroPreto.virar(direcao.ESQUERDA);
+carroPreto.virar(direcao.RETO);
