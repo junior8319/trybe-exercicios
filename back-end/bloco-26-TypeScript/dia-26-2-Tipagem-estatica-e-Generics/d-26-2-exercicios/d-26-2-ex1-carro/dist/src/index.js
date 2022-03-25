@@ -1,0 +1,28 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const carro_1 = __importDefault(require("./carro"));
+const cores_1 = __importDefault(require("./cores"));
+const direcao_1 = __importDefault(require("./direcao"));
+const portas_1 = __importDefault(require("./portas"));
+const carroPreto = new carro_1.default('Ford', cores_1.default.PRETA, 4);
+console.log(carroPreto);
+carroPreto.abrirPorta(portas_1.default.CARONA);
+carroPreto.fecharPorta(portas_1.default.CARONA);
+carroPreto.ligar();
+carroPreto.desligar();
+carroPreto.ligar();
+carroPreto.buzinar();
+carroPreto.aumentaVelocidade();
+carroPreto.aumentaVelocidade();
+carroPreto.aumentaVelocidade();
+carroPreto.diminuiVelocidade();
+carroPreto.diminuiVelocidade();
+carroPreto.diminuiVelocidade();
+carroPreto.diminuiVelocidade();
+carroPreto.parar();
+carroPreto.aumentaVelocidade();
+carroPreto.virar(direcao_1.default.ESQUERDA);
+carroPreto.virar(direcao_1.default.RETO);
