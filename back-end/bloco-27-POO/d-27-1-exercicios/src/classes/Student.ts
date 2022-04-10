@@ -1,12 +1,13 @@
-class Student {
+import Person from "./Person";
+
+export default class Student extends Person {
   private _enrollment: string;
-  private _name: string;
   private _examsGrades: number[];
   private _worksGrades: number[];
 
-  constructor(enrollment: string, name: string) {
-    this._enrollment = enrollment;
-    this._name = name;
+  constructor(enrollment: string, name: string, birthDate: Date) {
+    super(name, birthDate);
+    this._enrollment = this.generateEnrollment();
     this._examsGrades = [];
     this._worksGrades = [];
   }
@@ -16,19 +17,11 @@ class Student {
   }
 
   set enrollment(receivedValue: string) {
-    this._enrollment = receivedValue;
-  }
-
-  get name(): string {
-    return this._name;
-  }
-
-  set name(receivedName: string) {
-    if(receivedName.length < 3) {
-      throw new Error('O nome precisa ter no mínimo 3 caracteres');
+    if (receivedValue.length < 16) {
+      throw new Error('A matrícula deve ter no mínimo 16 caracteres');
     }
 
-    this._name = receivedName;
+    this._enrollment = receivedValue;
   }
 
   get examsGrades(): number[] {
@@ -66,22 +59,10 @@ class Student {
 
     return Math.round(sumGrades / totalGrades);
   }
+
+  public generateEnrollment(): string {
+    const randomEnrollment = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
+
+    return `STU${randomEnrollment}`;
+  }
 }
-
-const studentOne = new Student('12345', 'João');
-console.log(studentOne);
-studentOne.examsGrades = [5, 6, 7, 8];
-studentOne.worksGrades = [10, 10];
-const st1SumGrades = studentOne.calculateSumGrades();
-const st1AverageGrade = studentOne.calculateAverageGrade();
-console.log(`A média de ${studentOne.name} é ${st1AverageGrade} e sua soma de notas é ${st1SumGrades}`);
-
-const studentTwo = new Student('54321', 'Maria');
-console.log(studentTwo);
-studentTwo.examsGrades = [10, 9, 8, 7];
-studentTwo.worksGrades = [10, 10];
-const st2SumGrades = studentTwo.calculateSumGrades();
-const st2AverageGrade = studentTwo.calculateAverageGrade();
-console.log(`Notas de provas de ${studentTwo.name}: ${studentTwo.examsGrades}`);
-console.log(`Notas de trabalhos de ${studentTwo.name}: ${studentTwo.worksGrades}`);
-console.log(`A média de ${studentTwo.name} é ${st2AverageGrade} e sua soma de notas é ${st2SumGrades}`);
