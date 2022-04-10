@@ -1,8 +1,13 @@
 "use strict";
-class Student {
-    constructor(enrollment, name) {
-        this._enrollment = enrollment;
-        this._name = name;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const Person_1 = __importDefault(require("./Person"));
+class Student extends Person_1.default {
+    constructor(enrollment, name, birthDate) {
+        super(name, birthDate);
+        this._enrollment = this.generateEnrollment();
         this._examsGrades = [];
         this._worksGrades = [];
     }
@@ -10,16 +15,10 @@ class Student {
         return this._enrollment;
     }
     set enrollment(receivedValue) {
-        this._enrollment = receivedValue;
-    }
-    get name() {
-        return this._name;
-    }
-    set name(receivedName) {
-        if (receivedName.length < 3) {
-            throw new Error('O nome precisa ter no mínimo 3 caracteres');
+        if (receivedValue.length < 16) {
+            throw new Error('A matrícula deve ter no mínimo 16 caracteres');
         }
-        this._name = receivedName;
+        this._enrollment = receivedValue;
     }
     get examsGrades() {
         return this._examsGrades;
@@ -48,20 +47,9 @@ class Student {
         const totalGrades = this._examsGrades.length + this._worksGrades.length;
         return Math.round(sumGrades / totalGrades);
     }
+    generateEnrollment() {
+        const randomEnrollment = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
+        return `STU${randomEnrollment}`;
+    }
 }
-const studentOne = new Student('12345', 'João');
-console.log(studentOne);
-studentOne.examsGrades = [5, 6, 7, 8];
-studentOne.worksGrades = [10, 10];
-const st1SumGrades = studentOne.calculateSumGrades();
-const st1AverageGrade = studentOne.calculateAverageGrade();
-console.log(`A média de ${studentOne.name} é ${st1AverageGrade} e sua soma de notas é ${st1SumGrades}`);
-const studentTwo = new Student('54321', 'Maria');
-console.log(studentTwo);
-studentTwo.examsGrades = [10, 9, 8, 7];
-studentTwo.worksGrades = [10, 10];
-const st2SumGrades = studentTwo.calculateSumGrades();
-const st2AverageGrade = studentTwo.calculateAverageGrade();
-console.log(`Notas de provas de ${studentTwo.name}: ${studentTwo.examsGrades}`);
-console.log(`Notas de trabalhos de ${studentTwo.name}: ${studentTwo.worksGrades}`);
-console.log(`A média de ${studentTwo.name} é ${st2AverageGrade} e sua soma de notas é ${st2SumGrades}`);
+exports.default = Student;

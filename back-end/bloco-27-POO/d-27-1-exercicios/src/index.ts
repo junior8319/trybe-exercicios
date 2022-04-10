@@ -1,4 +1,6 @@
-import Student from "./src/classes/Student";
+import Student from "./classes/Student";
+import Subject from "./classes/Subject";
+import Teacher from "./classes/Teacher";
 
 const studentOne = new Student('12345', 'João', new Date(2000, 1, 1));
 console.log(studentOne);
@@ -17,3 +19,13 @@ const st2AverageGrade = studentTwo.calculateAverageGrade();
 console.log(`Notas de provas de ${studentTwo.name}: ${studentTwo.examsGrades}`);
 console.log(`Notas de trabalhos de ${studentTwo.name}: ${studentTwo.worksGrades}`);
 console.log(`A média de ${studentTwo.name} é ${st2AverageGrade} e sua soma de notas é ${st2SumGrades}`);
+
+const newMath = new Subject('Matemática');
+const newHistory = new Subject('História');
+const newPhilosophy = new Subject('Filosofia');
+console.log(newMath.name);
+console.log(newHistory.name);
+console.log(newPhilosophy.name);
+
+const newTeacher = new Teacher('Maria da Silva', new Date(1987, 8, 29), 2000, newHistory);
+console.log(newTeacher);
