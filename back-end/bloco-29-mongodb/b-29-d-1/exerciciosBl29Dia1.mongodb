@@ -7,3 +7,7 @@ db.bios.find({ _id: 8 }, { name: 1 }).pretty()
 db.bios.find({ _id: 8 }, { name: true, birth: true }).pretty()
 
 db.bios.find({ 'name.first': "John" }).pretty()
+
+db.bios.find().pretty().limit(3)
+
+db.bios.find().pretty().skip(5).limit(2)
