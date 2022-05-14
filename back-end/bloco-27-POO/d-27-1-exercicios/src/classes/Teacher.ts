@@ -1,16 +1,21 @@
-import IEmployee from "../interfaces/Employee";
-import Person from "./Person";
+import IEnrollable from "../interfaces/Enrollable";
+import Employee from "./Employee";
 import Subject from "./Subject";
 
-export default class Teacher extends Person
-  implements IEmployee {
+export default class Teacher extends Employee
+  implements IEnrollable {
     private _subject: Subject;
     private _salary: number = Number();
     private _registration: string = String();
     private _admissionDate: Date;
 
     constructor(name: string,  birthDate: Date, salary: number, subject: Subject) {
-      super(name, birthDate);
+      super(
+        name,
+        birthDate,
+        salary,
+        subject,
+      );
 
       this._subject = subject;
       this.salary = salary;

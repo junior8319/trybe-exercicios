@@ -3,10 +3,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Person_1 = __importDefault(require("./Person"));
-class Teacher extends Person_1.default {
+const Employee_1 = __importDefault(require("./Employee"));
+class Teacher extends Employee_1.default {
     constructor(name, birthDate, salary, subject) {
-        super(name, birthDate);
+        super(name, birthDate, salary, subject);
         this._salary = Number();
         this._registration = String();
         this._subject = subject;

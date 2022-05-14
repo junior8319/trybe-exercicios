@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Person_1 = __importDefault(require("../classes/Person"));
+const Person_1 = __importDefault(require("./Person"));
 class Employee extends Person_1.default {
     constructor(name, birthDate, registration, salary, admissionDate) {
         super(name, birthDate);
@@ -31,9 +31,6 @@ class Employee extends Person_1.default {
     set admissionDate(admissionDate) {
         // this.validateAdmissionDate(admissionDate);
         this._admissionDate = admissionDate;
-    }
-    generateRegistration() {
-        this.registration = super.generateRegistration();
     }
 }
 exports.default = Employee;

@@ -2,18 +2,20 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class Person {
     constructor(name, birthDate) {
+        this._name = String();
+        this._birthDate = new Date();
         this._name = name;
         this._birthDate = birthDate;
     }
     get name() {
         return this._name;
     }
-    get birthDate() {
-        return this._birthDate;
-    }
     set name(name) {
         this.validateName(name);
         this._name = name;
+    }
+    get birthDate() {
+        return this._birthDate;
     }
     set birthDate(birthDate) {
         this.validateBirthDate(birthDate);

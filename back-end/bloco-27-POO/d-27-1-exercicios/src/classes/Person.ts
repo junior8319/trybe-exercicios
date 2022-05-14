@@ -1,6 +1,6 @@
-export default class Person {
-  private _name: string;
-  private _birthDate: Date;
+export default abstract class Person {
+  private _name: string = String();
+  private _birthDate: Date = new Date();
 
   constructor(name: string, birthDate: Date) {
     this._name = name;
@@ -11,13 +11,13 @@ export default class Person {
     return this._name;
   }
 
-  get birthDate(): Date {
-    return this._birthDate;
-  }
-
   set name(name: string) {
     this.validateName(name);
     this._name = name;
+  }
+  
+  get birthDate(): Date {
+    return this._birthDate;
   }
 
   set birthDate(birthDate: Date) {
