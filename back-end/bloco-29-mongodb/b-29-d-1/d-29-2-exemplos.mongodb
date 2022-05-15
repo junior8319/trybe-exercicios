@@ -225,4 +225,6 @@ db.filmes.insertMany([
   },
 ]);
 
-db.inventory.find().pretty();
+show collections
+
+db.filmes.find().pretty();
