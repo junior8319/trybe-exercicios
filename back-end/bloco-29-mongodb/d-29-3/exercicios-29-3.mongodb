@@ -152,3 +152,49 @@ db.movies.find(
     ratings: true,
   },
 ).pretty();
+
+// exercício 9 com $and, $size, e $mod
+db.movies.find(
+  {
+    $and: [
+      { budget: { $mod: [5, 0] } },
+      { category: { $size: 2 } },
+    ],
+  },
+  {
+    _id: false,
+  },
+);
+
+// exercício 10, minha solução ($or, $regex, $gt)
+db.movies.find(
+  {
+    $or: [
+      { category: { $regex: /^sci-fi/i } },
+      { ratings: { $gt: 199 } },
+    ],
+  },
+  {
+    _id: false,
+    title: true,
+    ratings: true,
+    category: true,
+  },
+);
+
+// exercício 10, solução do gabarito ($or, $all e $elemMatch)
+db.movies.find(
+  {
+    $or: [
+      { category: { $all: ["sci-fi"] } },
+      { ratings: { $elemMatch: { $gt: 199 } } }
+    ]
+  },
+  { _id: 0, title: 1, ratings: 1, category: 1 }
+);
+
+// exercício 12, $regex
+db.movies.find({ description: { $regex: /^The/i } }).pretty();
+
+// exercício 13, $regex
+db.movies.find({ description: { $regex: /humanity.$/i } }).pretty();
