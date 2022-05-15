@@ -1,0 +1,358 @@
+use superheroes
+
+show dbs
+
+show collections
+
+db.individuals.countDocuments({})
+
+db.individuals.findOne({})
+/* resultado:
+  {
+	"_id" : ObjectId("6280ec948bff32e38f3cd6c5"),
+	"name" : "A-Bomb",
+	"alignment" : "good",
+	"gender" : "Male",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "yellow",
+		"hairColor" : "No Hair",
+		"height" : 203,
+		"weight" : 200
+	},
+	"publisher" : "Marvel Comics"
+}
+*/
+
+db.individuals.find({ "aspects.height": { $lt: 180 } }).pretty()
+
+db.individuals.countDocuments({ "aspects.height": { $lt: 180 } })
+// resultado: 421
+
+db.individuals.findOne({ "aspects.height": { $gte: 200 } })
+/* resultado:
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd6c5"),
+	"name" : "A-Bomb",
+	"alignment" : "good",
+	"gender" : "Male",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "yellow",
+		"hairColor" : "No Hair",
+		"height" : 203,
+		"weight" : 200
+	},
+	"publisher" : "Marvel Comics"
+}
+*/
+
+db.individuals.find({ "aspects.eyeColor": "green" }).pretty()
+/* resultado:
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd6ca"),
+	"name" : "Abomination",
+	"alignment" : "bad",
+	"gender" : "Male",
+	"race" : "Human / Radiation",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "No Hair",
+		"height" : 203,
+		"weight" : 200
+	},
+	"publisher" : "Marvel Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd6e1"),
+	"name" : "Annihilus",
+	"alignment" : "bad",
+	"gender" : "Male",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "No Hair",
+		"height" : 180,
+		"weight" : 40.82
+	},
+	"publisher" : "Marvel Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd703"),
+	"name" : "Batgirl",
+	"alignment" : "good",
+	"gender" : "Female",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Red",
+		"height" : 170,
+		"weight" : 25.85
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd705"),
+	"name" : "Batgirl IV",
+	"alignment" : "good",
+	"gender" : "Female",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Black",
+		"height" : 165,
+		"weight" : 23.58
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd70c"),
+	"name" : "Batwoman V",
+	"alignment" : "good",
+	"gender" : "Female",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Red",
+		"height" : 178,
+		"weight" : -44.9
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd70e"),
+	"name" : "Banshee",
+	"alignment" : "good",
+	"gender" : "Male",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Strawberry Blond",
+		"height" : 183,
+		"weight" : 34.92
+	},
+	"publisher" : "Marvel Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd716"),
+	"name" : "Beast Boy",
+	"alignment" : "good",
+	"gender" : "Male",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Green",
+		"skinColor" : "green",
+		"height" : 173,
+		"weight" : 30.84
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd724"),
+	"name" : "Black Cat",
+	"alignment" : "good",
+	"gender" : "Female",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Blond",
+		"height" : 178,
+		"weight" : 24.49
+	},
+	"publisher" : "Marvel Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd72a"),
+	"name" : "Black Mamba",
+	"alignment" : "bad",
+	"gender" : "Female",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Black",
+		"height" : 170,
+		"weight" : 23.58
+	},
+	"publisher" : "Marvel Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd72c"),
+	"name" : "Black Widow",
+	"alignment" : "good",
+	"gender" : "Female",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Auburn",
+		"height" : 170,
+		"weight" : 26.76
+	},
+	"publisher" : "Marvel Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd737"),
+	"name" : "Blink",
+	"alignment" : "good",
+	"gender" : "Female",
+	"race" : "Mutant",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Magenta",
+		"skinColor" : "pink",
+		"height" : 165,
+		"weight" : 25.4
+	},
+	"publisher" : "Marvel Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd74a"),
+	"name" : "Brainiac",
+	"alignment" : "bad",
+	"gender" : "Male",
+	"race" : "Android",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "No Hair",
+		"skinColor" : "green",
+		"height" : 198,
+		"weight" : 61.22
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd74c"),
+	"name" : "Brainiac 5",
+	"alignment" : "good",
+	"gender" : "Male",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Blond",
+		"height" : 170,
+		"weight" : 27.66
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd74d"),
+	"name" : "Buffy",
+	"alignment" : "good",
+	"gender" : "Female",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Blond",
+		"height" : 157,
+		"weight" : 23.58
+	},
+	"publisher" : "Dark Horse Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd765"),
+	"name" : "Carnage",
+	"alignment" : "bad",
+	"gender" : "Male",
+	"race" : "Symbiote",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Red",
+		"height" : 185,
+		"weight" : 39
+	},
+	"publisher" : "Marvel Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd768"),
+	"name" : "Catwoman",
+	"alignment" : "good",
+	"gender" : "Female",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Black",
+		"height" : 175,
+		"weight" : 27.66
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd76e"),
+	"name" : "Cheetah",
+	"alignment" : "bad",
+	"gender" : "Female",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Blond",
+		"height" : 163,
+		"weight" : 22.68
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd770"),
+	"name" : "Cheetah II",
+	"alignment" : "bad",
+	"gender" : "Female",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Brown",
+		"height" : 170,
+		"weight" : 24.94
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd776"),
+	"name" : "Citizen Steel",
+	"alignment" : "good",
+	"gender" : "Male",
+	"race" : "Human",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Red",
+		"height" : 183,
+		"weight" : 77.1
+	},
+	"publisher" : "DC Comics"
+}
+{
+	"_id" : ObjectId("6280ec948bff32e38f3cd782"),
+	"name" : "Crystal",
+	"alignment" : "good",
+	"gender" : "Female",
+	"race" : "Inhuman",
+	"aspects" : {
+		"eyeColor" : "green",
+		"hairColor" : "Red",
+		"height" : 168,
+		"weight" : 22.68
+	},
+	"publisher" : "Marvel Comics"
+}
+Type "it" for more
+> 
+*/
+
+db.individuals.countDocuments({ "aspects.eyeColor": "blue" })
+// resultado: 225
+
+ db.individuals.find({ "aspects.hairColor": { $in: ["black", "No Hair"] } })
+
+db.individuals.countDocuments({ "aspects.hairColor": { $in: ["black", "No Hair"] } })
+// resultado: 78
+
+db.individuals.countDocuments({ "aspects.hairColor": { $nin: ["black", "No Hair"] } })
+// resultado: 656
+
+db.individuals.countDocuments({ publisher: "George Lucas" })
+// verificação de quantidade que deverá ser removida: 14 documentos
+> db.individuals.countDocuments({})
+// verificação de quantidade total de documentos antes: 734
+> db.individuals.deleteMany({ publisher: "George Lucas" })
+// retorno mensagem de sucesso: { "acknowledged" : true, "deletedCount" : 14 }
+> db.individuals.countDocuments({})
+// verificação de quantidade de documentos após remoção: 720
+
+db.individuals.countDocuments({ publisher: "George Lucas" })
+// consfirmação de que foram removidos: 0
+
