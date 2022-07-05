@@ -41,4 +41,5 @@ if __name__ == '__main__':
     with open('percentuals.csv', 'w') as file:
         write_in_csv(file, header, rows)
 
+# ao executar o programa, o arquivo percentuals.csv será criado com os dados
 # feito com ajuda de algumas consultas ao gabarito.
