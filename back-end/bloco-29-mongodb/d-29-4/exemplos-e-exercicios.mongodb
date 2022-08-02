@@ -1,0 +1,12 @@
+use superheroes
+
+db.movies.find();
+
+db.movies.updateOne(
+  { title: "Batman" },
+  { $set: { budget: 45 }},
+);
+
+db.movies.findOne({ title: "Batman" });
+
+
