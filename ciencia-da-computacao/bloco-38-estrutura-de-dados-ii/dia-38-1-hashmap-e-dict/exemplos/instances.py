@@ -3,7 +3,7 @@ from HashMap import HashMap
 
 employees = [(14, "name1"), (23, "name2"), (10, "name3"), (9, "name4")]
 
-hash_map = HashMap() 
+hash_map = HashMap()
 
 for employee_id, employee_name in employees:
     employee = Employee(employee_id, employee_name)
